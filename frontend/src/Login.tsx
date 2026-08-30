@@ -11,29 +11,29 @@ export default function Login({ onLogin }: { onLogin: () => void }) {
 
   return (
     <div className="fb-login-screen">
+      <div className="fb-brand-header">
+        <h1>CHECKOUTZ</h1>
+        <p>Enterprise POS &amp; Business Management Platform</p>
+        <div className="cats">Retail • Wholesale • Distribution • Multi-Branch • Client Portal</div>
+      </div>
+
       <div className="fb-login-box">
-        <h1 className="fb-logo">POS SYSTEM</h1>
-        <p className="fb-tagline">Manage your bookshop, faster and easier.</p>
+        <h2>Welcome back</h2>
+        <p className="sub">Sign in to your Checkoutz workspace</p>
         <div className="fb-form">
-          <input
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          <input
-            placeholder="Password"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button className="fb-login-btn" onClick={handleLogin}>Log In</button>
-          <a className="fb-forgot" href="#">Forgotten password?</a>
-          <hr className="fb-divider" />
-          <button className="fb-create-btn" onClick={() => alert('Contact your admin to create an account')}>
-            Create New Account
+          <label>Email or username</label>
+          <input value={username} onChange={(e) => setUsername(e.target.value)} />
+          <label>Password</label>
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <button className="fb-login-btn" onClick={handleLogin}>Sign In</button>
+          <a className="fb-forgot" href="#">Forgot password?</a>
+          <button className="fb-secondary-btn" onClick={() => alert('Coming soon')}>
+            Quick PIN / Cashier Login
           </button>
         </div>
       </div>
+
+      <div className="fb-page-footer">Owned &amp; developed by CoreLogic IT Firm</div>
     </div>
   );
 }

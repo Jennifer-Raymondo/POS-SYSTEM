@@ -84,8 +84,8 @@ export default function Bookshop() {
       </div>
       <div className="page-body">
         <div className="products-actionbar">
-          <button className="action" onClick={() => { resetForm(); setShowForm(!showForm); }}>
-            + Add Product
+          <button className="action" onClick={() => { if (showForm) { resetForm(); } else { setShowForm(true); } }}>
+            {showForm ? 'Close Form' : '+ Add Product'}
           </button>
           <input
             className="products-search"

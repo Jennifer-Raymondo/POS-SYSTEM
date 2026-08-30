@@ -33,7 +33,7 @@ export default function Sidebar({ active, setActive }: { active: string; setActi
 
   return (
     <div className="sidebar">
-      <h2>CHECKOUTZ</h2>
+      <h2>POS SYSTEM</h2>
       <p className="tagline">CoreLogic POS</p>
       <div className="sidebar-links">
         {ITEMS.map((item) => (

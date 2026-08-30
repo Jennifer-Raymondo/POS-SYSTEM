@@ -12,7 +12,7 @@ export default function Login({ onLogin }: { onLogin: () => void }) {
   return (
     <div className="fb-login-screen">
       <div className="fb-brand-header">
-        <h1>CHECKOUTZ</h1>
+        <h1>POS SYSTEM</h1>
         <p>Enterprise POS &amp; Business Management Platform</p>
         <div className="cats">Retail • Wholesale • Distribution • Multi-Branch • Client Portal</div>
       </div>

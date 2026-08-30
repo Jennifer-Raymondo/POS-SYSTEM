@@ -4,7 +4,7 @@ import { Injectable } from '@nestjs/common';
 export class SettingsService {
   private settings = {
     businessName: 'My Bookshop',
-    currency: 'UGX',
+    currency: 'USD',
     taxRate: 0,
   };
 

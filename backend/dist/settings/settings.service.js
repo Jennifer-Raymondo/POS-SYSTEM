@@ -11,7 +11,7 @@ const common_1 = require("@nestjs/common");
 let SettingsService = class SettingsService {
     settings = {
         businessName: 'My Bookshop',
-        currency: 'UGX',
+        currency: 'USD',
         taxRate: 0,
     };
     get() {

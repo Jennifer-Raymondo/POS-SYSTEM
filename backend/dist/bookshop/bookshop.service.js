@@ -18,15 +18,16 @@ let BookshopService = class BookshopService {
         return this.books.find((b) => b.id === id);
     }
     create(data) {
-        const book = { id: this.nextId++, ...data };
+        const id = this.nextId++;
+        const sku = `SKU-${10023 + id}`;
+        const book = { id, sku, ...data };
         this.books.push(book);
         return book;
     }
     update(id, data) {
         const book = this.findOne(id);
-        if (book) {
+        if (book)
             Object.assign(book, data);
-        }
         return book;
     }
     remove(id) {
@@ -34,9 +35,8 @@ let BookshopService = class BookshopService {
     }
     reduceStock(id, quantity) {
         const book = this.findOne(id);
-        if (book) {
+        if (book)
             book.stock -= quantity;
-        }
     }
 };
 exports.BookshopService = BookshopService;

@@ -6,21 +6,18 @@ export default function Dashboard() {
   const [books, setBooks] = useState<any[]>([]);
   const [sales, setSales] = useState<any[]>([]);
   const [orders, setOrders] = useState<any[]>([]);
-  const [staff, setStaff] = useState<any[]>([]);
   const [summary, setSummary] = useState<any>({});
 
   useEffect(() => {
     fetch(`${API}/bookshop`).then((r) => r.json()).then(setBooks);
     fetch(`${API}/pos/sales`).then((r) => r.json()).then(setSales);
     fetch(`${API}/orders`).then((r) => r.json()).then(setOrders);
-    fetch(`${API}/hr`).then((r) => r.json()).then(setStaff);
     fetch(`${API}/accounts/summary`).then((r) => r.json()).then(setSummary);
   }, []);
 
   const today = new Date().toDateString();
   const todaySales = sales.filter((s) => new Date(s.createdAt).toDateString() === today);
   const todayTotal = todaySales.reduce((sum, s) => sum + s.total, 0);
-  const pendingOrders = orders.filter((o) => o.status === 'pending');
 
   // Sales performance: last 7 sales, oldest to newest
   const recent = sales.slice(-7);

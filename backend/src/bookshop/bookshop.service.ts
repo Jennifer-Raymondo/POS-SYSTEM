@@ -2,9 +2,11 @@ import { Injectable } from '@nestjs/common';
 
 export interface Book {
   id: number;
+  sku: string;
   title: string;
   author: string;
   price: number;
+  wholesalePrice: number;
   stock: number;
   category: string;
 }
@@ -22,19 +24,17 @@ export class BookshopService {
     return this.books.find((b) => b.id === id);
   }
 
-  create(data: Omit<Book, 'id'>): Book {
-    const book = { id: this.nextId++, ...data };
+  create(data: Omit<Book, 'id' | 'sku'>): Book {
+    const id = this.nextId++;
+    const sku = `SKU-${10023 + id}`;
+    const book = { id, sku, ...data };
     this.books.push(book);
     return book;
   }
 
   update(id: number, data: Partial<Book>): Book | undefined {
     const book = this.findOne(id);
-
-    if (book) {
-      Object.assign(book, data);
-    }
-
+    if (book) Object.assign(book, data);
     return book;
   }
 
@@ -44,9 +44,6 @@ export class BookshopService {
 
   reduceStock(id: number, quantity: number): void {
     const book = this.findOne(id);
-
-    if (book) {
-      book.stock -= quantity;
-    }
+    if (book) book.stock -= quantity;
   }
 }

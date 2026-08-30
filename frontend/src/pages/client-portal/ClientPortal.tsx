@@ -8,7 +8,11 @@ export default function ClientPortal() {
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
 
-  const register = async () => {
+    const register = async () => {
+    if (!name.trim() || !email.trim() || !password.trim()) {
+      alert('Please fill in Name, Email, and Password.');
+      return;
+    }
     const res = await fetch(`${API}/clients/register`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

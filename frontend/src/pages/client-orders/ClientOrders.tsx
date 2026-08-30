@@ -11,7 +11,11 @@ export default function ClientOrders() {
   const load = () => fetch(`${API}/orders`).then((r) => r.json()).then(setOrders);
   useEffect(() => { load(); }, []);
 
-  const placeOrder = async () => {
+    const placeOrder = async () => {
+    if (!clientId || !bookId || !quantity || Number(quantity) <= 0) {
+      alert('Please fill in Client ID, Book ID, and a valid Quantity.');
+      return;
+    }
     await fetch(`${API}/orders`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

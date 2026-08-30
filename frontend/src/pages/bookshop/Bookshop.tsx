@@ -20,7 +20,11 @@ export default function Bookshop() {
     setTitle(''); setAuthor(''); setPrice(''); setStock(''); setCategory('');
   };
 
-  const saveBook = async () => {
+    const saveBook = async () => {
+    if (!title.trim() || !author.trim() || !price || !stock || !category) {
+      alert('Please fill in all fields before saving.');
+      return;
+    }
     const payload = { title, author, price: Number(price), stock: Number(stock), category };
     if (editingId) {
       await fetch(`${API}/bookshop/${editingId}`, {

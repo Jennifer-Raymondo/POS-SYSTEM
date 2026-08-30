@@ -11,7 +11,11 @@ export default function Hr() {
   const load = () => fetch(`${API}/hr`).then((r) => r.json()).then(setStaff);
   useEffect(() => { load(); }, []);
 
-  const add = async () => {
+    const add = async () => {
+    if (!name.trim() || !role.trim() || !phone.trim()) {
+      alert('Please fill in Name, Role, and Phone.');
+      return;
+    }
     await fetch(`${API}/hr`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

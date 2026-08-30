@@ -15,7 +15,11 @@ export default function Accounts() {
   };
   useEffect(() => { load(); }, []);
 
-  const add = async () => {
+     const add = async () => {
+    if (!amount || Number(amount) <= 0 || !note.trim()) {
+      alert('Please fill in a valid amount and a note before adding.');
+      return;
+    }
     await fetch(`${API}/accounts`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

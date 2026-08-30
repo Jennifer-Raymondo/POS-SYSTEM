@@ -12,7 +12,11 @@ export default function Pos() {
   const loadSales = () => fetch(`${API}/pos/sales`).then((r) => r.json()).then(setSales);
   useEffect(() => { loadBooks(); loadSales(); }, []);
 
-  const checkout = async () => {
+    const checkout = async () => {
+    if (!bookId || !quantity || Number(quantity) <= 0) {
+      alert('Please select a book and enter a valid quantity.');
+      return;
+    }
     await fetch(`${API}/pos/checkout`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

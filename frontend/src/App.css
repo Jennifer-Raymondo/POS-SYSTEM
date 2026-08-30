@@ -320,3 +320,12 @@ table.burgundy-table th { color: white; text-transform: none; font-size: 13px; p
   cursor: pointer;
   text-decoration: underline;
 }
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.status-badge.healthy { background: #e3f5e6; color: #2a8a3e; }
+.status-badge.low { background: #fdeaea; color: #a33; }

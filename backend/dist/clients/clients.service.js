@@ -22,6 +22,15 @@ let ClientsService = class ClientsService {
     findAll() {
         return this.clients;
     }
+    update(id, data) {
+        const client = this.clients.find((c) => c.id === id);
+        if (client)
+            Object.assign(client, data);
+        return client;
+    }
+    remove(id) {
+        this.clients = this.clients.filter((c) => c.id !== id);
+    }
 };
 exports.ClientsService = ClientsService;
 exports.ClientsService = ClientsService = __decorate([

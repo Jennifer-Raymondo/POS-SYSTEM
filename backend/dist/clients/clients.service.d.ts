@@ -3,6 +3,8 @@ export interface Client {
     name: string;
     email: string;
     password: string;
+    phone?: string;
+    type?: string;
 }
 export declare class ClientsService {
     private clients;
@@ -10,4 +12,6 @@ export declare class ClientsService {
     register(data: Omit<Client, 'id'>): Client;
     login(email: string, password: string): Client | null;
     findAll(): Client[];
+    update(id: number, data: Partial<Client>): Client | undefined;
+    remove(id: number): void;
 }

@@ -8,4 +8,8 @@ export declare class ClientsController {
         password: string;
     }): import("./clients.service").Client | null;
     findAll(): import("./clients.service").Client[];
+    update(id: string, body: any): import("./clients.service").Client | undefined;
+    remove(id: string): {
+        deleted: boolean;
+    };
 }

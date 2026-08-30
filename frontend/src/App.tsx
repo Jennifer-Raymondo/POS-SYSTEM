@@ -10,6 +10,7 @@ import Settings from './pages/settings/Settings';
 import ClientPortal from './pages/client-portal/ClientPortal';
 import ClientOrders from './pages/client-orders/ClientOrders';
 import Inventory from './pages/inventory/Inventory';
+import Customers from './pages/customers/Customers';
 import './App.css';
 
 const PAGES: Record<string, React.JSX.Element> = {
@@ -22,6 +23,7 @@ const PAGES: Record<string, React.JSX.Element> = {
   'client-portal': <ClientPortal />,
   'client-orders': <ClientOrders />,
     inventory: <Inventory />,
+      customers: <Customers />,
 };
 
 function App() {

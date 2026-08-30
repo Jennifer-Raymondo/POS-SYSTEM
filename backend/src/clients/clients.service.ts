@@ -5,6 +5,8 @@ export interface Client {
   name: string;
   email: string;
   password: string;
+  phone?: string;
+  type?: string;
 }
 
 @Injectable()
@@ -24,5 +26,15 @@ export class ClientsService {
 
   findAll(): Client[] {
     return this.clients;
+  }
+
+  update(id: number, data: Partial<Client>): Client | undefined {
+    const client = this.clients.find((c) => c.id === id);
+    if (client) Object.assign(client, data);
+    return client;
+  }
+
+  remove(id: number): void {
+    this.clients = this.clients.filter((c) => c.id !== id);
   }
 }

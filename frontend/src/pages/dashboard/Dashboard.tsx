@@ -5,13 +5,11 @@ const API = 'https://pos-system-backend-vg4w.onrender.com';
 export default function Dashboard() {
   const [books, setBooks] = useState<any[]>([]);
   const [sales, setSales] = useState<any[]>([]);
-  const [orders, setOrders] = useState<any[]>([]);
   const [summary, setSummary] = useState<any>({});
 
   useEffect(() => {
     fetch(`${API}/bookshop`).then((r) => r.json()).then(setBooks);
     fetch(`${API}/pos/sales`).then((r) => r.json()).then(setSales);
-    fetch(`${API}/orders`).then((r) => r.json()).then(setOrders);
     fetch(`${API}/accounts/summary`).then((r) => r.json()).then(setSummary);
   }, []);
 

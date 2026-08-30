@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const API = 'http://localhost:3000';
+const API = 'https://pos-system-backend-vg4w.onrender.com';
 const CATEGORIES = ['Fiction', 'Non-fiction', 'Business', 'Education', 'Children', 'History'];
 
 export default function Bookshop() {

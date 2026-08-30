@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const API = 'http://localhost:3000';
+const API = 'https://pos-system-backend-vg4w.onrender.com';
 
 export default function Dashboard() {
   const [books, setBooks] = useState<any[]>([]);

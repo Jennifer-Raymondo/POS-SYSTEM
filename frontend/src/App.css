@@ -181,3 +181,42 @@ tr:hover td { background: #faf7f0; }
   box-shadow: 0 4px 14px rgba(33, 49, 63, 0.08);
   padding: 8px 24px 20px;
 }
+
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    padding: 16px 0;
+  }
+  .sidebar h2 { font-size: 18px; }
+  .sidebar button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  .main-content {
+    width: 100%;
+  }
+  .topbar {
+    padding: 18px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .topbar h2 { font-size: 20px; }
+  .page-body {
+    padding: 20px;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .form-card {
+    max-width: 100%;
+  }
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

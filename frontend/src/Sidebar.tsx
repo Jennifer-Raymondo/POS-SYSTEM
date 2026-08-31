@@ -1,4 +1,4 @@
-const WORKING = ['dashboard', 'bookshop', 'pos', 'accounts', 'hr', 'settings', 'client-portal', 'client-orders', 'inventory', 'purchases', 'customers', 'finance', 'petty-cash', 'reports', 'suppliers'];
+const WORKING = ['dashboard', 'bookshop', 'pos', 'accounts', 'hr', 'settings', 'client-portal', 'client-orders', 'inventory', 'purchases', 'customers', 'finance', 'petty-cash', 'reports', 'suppliers', 'wholesale'];
 
 const ITEMS = [
   { key: 'dashboard', label: 'Dashboard' },

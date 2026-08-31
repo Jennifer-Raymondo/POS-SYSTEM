@@ -9,6 +9,7 @@ import { OrdersModule } from './orders/orders.module';
 import { PettyCashModule } from './petty-cash/petty-cash.module';
 import { SuppliersModule } from './suppliers/suppliers.module';
 import { WholesaleModule } from './wholesale/wholesale.module';
+import { DeliveriesModule } from './deliveries/deliveries.module';
 
 @Module({
   imports: [
@@ -21,7 +22,8 @@ import { WholesaleModule } from './wholesale/wholesale.module';
     OrdersModule,
     PettyCashModule,
     SuppliersModule,
-    WholesaleModule
+    WholesaleModule,
+    DeliveriesModule
 
   ],
 })

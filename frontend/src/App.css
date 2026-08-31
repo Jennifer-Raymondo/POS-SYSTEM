@@ -370,3 +370,10 @@ table.burgundy-table th { color: white; text-transform: none; font-size: 13px; p
 }
 .principle-main { font-weight: 700; color: #1c1e21; margin: 0 0 6px 0; font-size: 14.5px; }
 .principle-sub { color: #8a8578; margin: 0; font-size: 13.5px; }
+
+.timeline-track { display: flex; align-items: center; margin: 20px 0 8px; }
+.timeline-step { display: flex; align-items: center; flex: 1; }
+.timeline-step:last-child { flex: 0; }
+.timeline-dot { width: 14px; height: 14px; border-radius: 50%; background: #6d1130; flex-shrink: 0; }
+.timeline-line { flex: 1; height: 3px; background: #6d1130; }
+.timeline-labels { display: flex; justify-content: space-between; font-size: 12.5px; color: #65676b; font-weight: 600; }

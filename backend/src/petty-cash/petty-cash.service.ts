@@ -12,7 +12,7 @@ export interface Voucher {
 
 @Injectable()
 export class PettyCashService {
-  private fundBalance = 1000;
+   private fundBalance = 0;
   private vouchers: Voucher[] = [];
   private nextId = 1;
 

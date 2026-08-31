@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { HrService } from './hr.service';
 
 @Controller('hr')
@@ -13,6 +13,11 @@ export class HrController {
   @Post()
   create(@Body() body: any) {
     return this.hrService.create(body);
+  }
+
+  @Put(':id')
+  update(@Param('id') id: string, @Body() body: any) {
+    return this.hrService.update(+id, body);
   }
 
   @Delete(':id')

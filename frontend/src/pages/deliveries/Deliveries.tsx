@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 
 const API = 'https://pos-system-backend-vg4w.onrender.com';
 const STAGES = ['Confirmed', 'Picked', 'Dispatched', 'Out'];
-const STATUSES = ['Preparing', 'Out for delivery', 'Delivered'];
 
 export default function Deliveries() {
   const [deliveries, setDeliveries] = useState<any[]>([]);
@@ -33,7 +32,7 @@ export default function Deliveries() {
     load();
   };
 
-  const today = new Date().toDateString();
+
   const todayCount = deliveries.length; // all entries count as "today" since there's no separate date field yet
 
   return (

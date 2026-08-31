@@ -7,6 +7,7 @@ import { SettingsModule } from './settings/settings.module';
 import { ClientsModule } from './clients/clients.module';
 import { OrdersModule } from './orders/orders.module';
 import { PettyCashModule } from './petty-cash/petty-cash.module';
+import { SuppliersModule } from './suppliers/suppliers.module';
 
 @Module({
   imports: [
@@ -17,7 +18,8 @@ import { PettyCashModule } from './petty-cash/petty-cash.module';
     SettingsModule,
     ClientsModule,
     OrdersModule,
-    PettyCashModule
+    PettyCashModule,
+    SuppliersModule
   ],
 })
 export class AppModule {}

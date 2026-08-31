@@ -353,3 +353,20 @@ table.burgundy-table th { color: white; text-transform: none; font-size: 13px; p
   text-align: left;
 }
 .pill-btn:hover { background: #eddce2; }
+
+.principle-box {
+  background: #fbeff2;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-top: 24px;
+}
+.principle-label {
+  color: #6d1130;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 10px;
+}
+.principle-main { font-weight: 700; color: #1c1e21; margin: 0 0 6px 0; font-size: 14.5px; }
+.principle-sub { color: #8a8578; margin: 0; font-size: 13.5px; }

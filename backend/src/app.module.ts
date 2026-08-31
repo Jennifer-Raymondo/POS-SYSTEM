@@ -10,6 +10,7 @@ import { PettyCashModule } from './petty-cash/petty-cash.module';
 import { SuppliersModule } from './suppliers/suppliers.module';
 import { WholesaleModule } from './wholesale/wholesale.module';
 import { DeliveriesModule } from './deliveries/deliveries.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -23,7 +24,8 @@ import { DeliveriesModule } from './deliveries/deliveries.module';
     PettyCashModule,
     SuppliersModule,
     WholesaleModule,
-    DeliveriesModule
+    DeliveriesModule,
+    AuthModule
 
   ],
 })

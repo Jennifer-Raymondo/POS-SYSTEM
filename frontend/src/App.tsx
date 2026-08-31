@@ -15,6 +15,7 @@ import Finance from './pages/finance/Finance';
 import PettyCash from './pages/petty-cash/PettyCash';
 import Suppliers from './pages/suppliers/Suppliers';
 import Wholesale from './pages/wholesale/Wholesale';
+import Orders from './pages/orders/Orders';
 import './App.css';
 
 const PAGES: Record<string, React.JSX.Element> = {
@@ -32,6 +33,7 @@ const PAGES: Record<string, React.JSX.Element> = {
     'petty-cash': <PettyCash />,
      suppliers: <Suppliers />,
      wholesale: <Wholesale />,
+       orders: <Orders />,
 };
 
 function App() {

@@ -11,6 +11,7 @@ import { SuppliersModule } from './suppliers/suppliers.module';
 import { WholesaleModule } from './wholesale/wholesale.module';
 import { DeliveriesModule } from './deliveries/deliveries.module';
 import { AuthModule } from './auth/auth.module';
+import { PurchasesModule } from './purchases/purchases.module';
 
 @Module({
   imports: [
@@ -25,7 +26,8 @@ import { AuthModule } from './auth/auth.module';
     SuppliersModule,
     WholesaleModule,
     DeliveriesModule,
-    AuthModule
+    AuthModule,
+    PurchasesModule,
 
   ],
 })

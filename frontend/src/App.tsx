@@ -19,6 +19,7 @@ import Orders from './pages/orders/Orders';
 import Deliveries from './pages/deliveries/Deliveries';
 import Purchases from './pages/purchases/Purchases';
 import Reports from './pages/reports/Reports';
+import UsersRoles from './pages/users-roles/UsersRoles';
 import './App.css';
 
 
@@ -41,6 +42,7 @@ const PAGES: Record<string, React.JSX.Element> = {
       deliveries: <Deliveries />,
         purchases: <Purchases />,
        reports: <Reports />,
+      'users-roles': <UsersRoles />,
 };
 
 function App() {

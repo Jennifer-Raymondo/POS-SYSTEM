@@ -15,6 +15,11 @@ const hr_module_1 = require("./hr/hr.module");
 const settings_module_1 = require("./settings/settings.module");
 const clients_module_1 = require("./clients/clients.module");
 const orders_module_1 = require("./orders/orders.module");
+const petty_cash_module_1 = require("./petty-cash/petty-cash.module");
+const suppliers_module_1 = require("./suppliers/suppliers.module");
+const wholesale_module_1 = require("./wholesale/wholesale.module");
+const deliveries_module_1 = require("./deliveries/deliveries.module");
+const auth_module_1 = require("./auth/auth.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -28,6 +33,11 @@ exports.AppModule = AppModule = __decorate([
             settings_module_1.SettingsModule,
             clients_module_1.ClientsModule,
             orders_module_1.OrdersModule,
+            petty_cash_module_1.PettyCashModule,
+            suppliers_module_1.SuppliersModule,
+            wholesale_module_1.WholesaleModule,
+            deliveries_module_1.DeliveriesModule,
+            auth_module_1.AuthModule
         ],
     })
 ], AppModule);

@@ -19,6 +19,12 @@ let HrService = class HrService {
         this.staff.push(member);
         return member;
     }
+    update(id, data) {
+        const member = this.staff.find((s) => s.id === id);
+        if (member)
+            Object.assign(member, data);
+        return member;
+    }
     remove(id) {
         this.staff = this.staff.filter((s) => s.id !== id);
     }
